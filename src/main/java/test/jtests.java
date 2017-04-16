@@ -39,7 +39,7 @@ public class jtests {
 
                this.sampleService.getClass().toString());
          */
-	   assertEquals("12","12");
+	   assertEquals("32","32");
 
    }
 
