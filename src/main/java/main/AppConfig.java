@@ -10,7 +10,11 @@ import service.SampleServiceImpl;
 public class AppConfig {
 	@Bean
 	public SampleService getSampleService() {
+		
+		
 		return new SampleServiceImpl();
-	}
+		
+	}  
+	
 }
 
