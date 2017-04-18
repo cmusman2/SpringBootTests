@@ -16,11 +16,13 @@ public class SpringApplicationContextExample {
 	  
 	  
 	  
-	  
+	  /*
 	public static void main (String[] args) throws IOException
 	  {
 		new SpringApplicationContextExample();
 	  }
+	
+	*/
 
 	  public SpringApplicationContextExample() throws IOException
 	  {
