@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:util="http://www.springframework.org/schema/util"
+xmlns:context="http://www.springframework.org/schema/context"
+ 
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+                    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                    http://www.springframework.org/schema/context
+	                http://www.springframework.org/schema/context/spring-context-2.5.xsd
+                    http://www.springframework.org/schema/util 
+                    http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+                                     
+                    
+                    
+<context:annotation-config />
+
+<util:list id="myList" value-type="java.lang.String">
+    <value>foo</value>
+    <value>bar</value>
+    <value>bar</value>
+    <value>bar</value>
+    <value>bar</value>
+    <value>bar</value>
+    <value>bar</value>
+    <value>bar</value>
+    <value>bar</value>
+    <value>faa</value>
+</util:list>
+
+
+<bean id="stage1" name="stage1" class="autowiring.Stageclass">
+<property name="dodle" value="hellodoodle" />
+</bean>
+<bean id="stage2" name="stage2" class="autowiring.Stageclass">
+<property name="dodle" value="gooddoodle" />
+</bean>
+
+<bean id="stages" class="java.util.ArrayList">
+    <constructor-arg>
+        <list>
+            <ref bean="stage1" />
+            <ref bean="stage2" />                
+            <ref bean="stage2" />                
+            <ref bean="stage2" />                
+            <ref bean="stage2" />                
+            <ref bean="stage2" />                
+        </list>
+    </constructor-arg>
+</bean>
+
+
+
+<bean id="CustomerBean" class="autowiring.Customer">
+		<property name="action" value="buy" />
+		<property name="type" value="1" />
+	</bean>
+
+	<bean id="PersonBean1" class="autowiring.Person">
+		<property name="name" value="mkyong1" />
+		<property name="address" value="address 1" />
+		<property name="age" value="28" />
+	</bean>
+
+	<bean id="PersonBean2" class="autowiring.Person">
+		<property name="name" value="mkyong2" />
+		<property name="address" value="address 2" />
+		<property name="age" value="28" />
+	</bean>
+	
+</beans>
