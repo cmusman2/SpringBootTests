@@ -9,6 +9,7 @@ public class Customer {
 	private Person person;
 	private int type;
 	private String action;
+	private int age;
 
 	// getter and setter methods
 	public Person getPerson() {
@@ -34,4 +35,14 @@ public class Customer {
 	public void setAction(String action) {
 		this.action = action;
 	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
+	
 }

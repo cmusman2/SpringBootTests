@@ -21,10 +21,17 @@ public class SpringApplicationContextExample {
 	public SpringApplicationContextExample() throws IOException {
 		// open/read the application context file
 		try {
+			
+			
+			
+			
+			
 
-			// System.out.println(persons.size());
+			 //System.out.println(persons.size());
 
-			// System.out.println(customer.getAction());
+			
+			
+			 //System.out.println(customer.getAction());
 
 			ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("beans.xml");
 			List<String> myList = (List<String>) ctx.getBean("myList");
