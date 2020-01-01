@@ -102,6 +102,8 @@ public class jtests {
                    existingOrder.getDescription());
 
        }
+       
+       
        existingOrder=null;
        assertNotNull("Object is not null", existingOrder);
 
