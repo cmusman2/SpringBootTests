@@ -39,7 +39,7 @@ public class jtests {
 
                this.sampleService.getClass().toString());
          */
-	   assertEquals("32","32");
+	   assertEquals("32","33");
 
    }
 
@@ -104,7 +104,7 @@ public class jtests {
        }
        
        
-       existingOrder=null;
+       
        assertNotNull("Object is not null", existingOrder);
 
    }
