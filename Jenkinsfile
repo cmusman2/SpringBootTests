@@ -6,9 +6,9 @@ pipeline{
          steps{
             
               echo 'attempting to compile...'
-            def mvnHome = tool name: 'maven_3_5_0', type: 'maven'
+         
               
-                 sh "${mvnHome}/bin/mvn clean compile" 
+                 sh "mvn clean compile" 
               
             
          }
