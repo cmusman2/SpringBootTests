@@ -23,6 +23,9 @@ public class Customer {
 	
 	
 	
+	
+	
+	
 	public int getType() {
 		return type;
 	}
