@@ -7,10 +7,9 @@ pipeline{
             
               echo 'attempting to compile...'
          
-              withMaven(maven : 'maven_3_5_0')
-              {
+              
                  sh 'mvn clean compile' 
-              } 
+              
             
          }
         
