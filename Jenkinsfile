@@ -9,14 +9,27 @@ pipeline{
         
        }
        
-       stage('build')
+       stage('Build')
        {
           steps{
              echo 'building...'
            }
        }
        
-       stage('deploy')
+       stage('Test')
+       {
+          steps{
+             echo 'tested ...'
+           }
+       }
+       
+        stage('ConfirmDeploy')
+       {
+          steps{
+             input('Ready to deploy?')
+           }
+       }
+       stage('Deploy')
        {
          steps{
               echo 'deploying...'
