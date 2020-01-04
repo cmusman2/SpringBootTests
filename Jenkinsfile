@@ -5,13 +5,9 @@ pipeline{
        {
          steps{
             
-             echo 'attempting to compile...'
+              echo 'attempting to compile...'
          
-              withMaven(maven : 'maven_3_5_0')
-              {
-                /**sh 'mvn clean compile'**/
-              }
-            
+             
          }
         
        }
