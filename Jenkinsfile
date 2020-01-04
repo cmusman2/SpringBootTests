@@ -4,7 +4,16 @@ pipeline{
        stage('Compile')
        {
          steps{
-             echo 'compiling...'
+           step{
+             echo 'attempting to compile...'
+           }
+             
+            step{
+              withMven(maven : 'maven_3_5_0')
+              {
+                sh 'mvn clean compile'
+              }
+           }
          }
         
        }
