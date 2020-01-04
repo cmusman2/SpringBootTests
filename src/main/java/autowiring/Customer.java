@@ -20,6 +20,9 @@ public class Customer {
 		this.person = person;
 	}
 
+	
+	
+	
 	public int getType() {
 		return type;
 	}
