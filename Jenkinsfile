@@ -5,9 +5,10 @@ pipeline{
        {
          steps{
             
-                sh 'mkdir archive'
-                sh 'echo test > archive/test.txt'
-                zip zipFile: 'test.zip', archive: false, dir: 'archive'
+                sh "mkdir -p archive"
+                writeFile file: "archive/usefulfile.txt", text: "This file is useful, need to archive it."
+                sh "echo test > archive/test.txt"
+                zip zipFile: "test.zip", archive: false, dir: "archive"
    
          }
         
