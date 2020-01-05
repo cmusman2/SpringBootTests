@@ -65,10 +65,10 @@ script {
                             targetLocation: '.'),
                     folderCopyOperation(
                             destinationFolderPath: 'dest',
-                            sourceFolderPath: 'foo/content'),*/
+                            sourceFolderPath: 'foo/content'), 
                     folderDeleteOperation(
-                           // 'data_${currentBuild.number}.zip'
-                    )
+                            'data_${currentBuild.number}.zip'
+                    )*/
             ])
         }                
                 
