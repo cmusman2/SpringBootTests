@@ -76,7 +76,7 @@ script {
                 //bat "mkdir -p archive"
                 writeFile file: "archive/usefulfile.txt", text: "This file is useful, need to archive it."
                 bat "echo test > archive/test.txt"
-                zip zipFile: "data.zip", archive: false, dir: "src"
+                zip zipFile: "data_${currentBuild.number}.zip", archive: false, dir: "src"
             }
        }
     }
