@@ -1,5 +1,9 @@
 pipeline{
 	agent any
+	environment {
+        XCODE_BUILD_NUMBER = VersionNumber(projectStartDate: '1970-01-01', versionNumberString: '${BUILD_DATE_FORMATTED, "yyyyMMddHHmm"}', versionPrefix: '')
+    }
+	
 	stages{
        stage('Compile')
        {
@@ -11,6 +15,13 @@ pipeline{
         
        }
        
+       stage('Example Print') {
+            steps{
+                echo XCODE_BUILD_NUMBER
+                bat 'add dollar sign when using bat: $XCODE_BUILD_NUMBER' 
+            }
+        }
+        
        stage('Build')
        {
           steps{
