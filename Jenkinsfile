@@ -67,7 +67,7 @@ script {
                             destinationFolderPath: 'dest',
                             sourceFolderPath: 'foo/content'),*/
                     folderDeleteOperation(
-                            'data.zip'
+                            'data_${currentBuild.number}.zip'
                     )
             ])
         }                
