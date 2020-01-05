@@ -5,10 +5,14 @@ pipeline{
        {
          steps{
             
-                sh "mkdir -p archive"
-                writeFile file: "archive/usefulfile.txt", text: "This file is useful, need to archive it."
-                sh "echo test > archive/test.txt"
-                zip zipFile: "test.zip", archive: false, dir: "archive"
+              sh "mkdir -p output"
+
+    // Write an useful file, which is needed to be archived.
+    writeFile file: "output/usefulfile.txt", text: "This file is useful, need to archive it."
+
+    // Write an useless file, which is not needed to be archived.
+    writeFile file: "output/uselessfile.md", text: "This file is useless, no need to archive it."
+
    
          }
         
