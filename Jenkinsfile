@@ -4,9 +4,9 @@ pipeline{
        stage('Compile')
        {
          steps{
-                echo 'tested ...'
-                bat'mvn clean compile'
-                echo 'done'
+                echo "tested ..."
+                bat "mvn clean compile"
+                echo "done"
          }
         
        }
@@ -23,7 +23,7 @@ pipeline{
        {
           steps{
              echo 'testing ...'
-             bat'mvn test'
+             bat 'mvn test'
              echo 'done'
            }
        }
